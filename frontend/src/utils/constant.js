@@ -2,6 +2,7 @@ export const USER_API_END_POINT="/api/v1/user";
 export const JOB_API_END_POINT="/api/v1/job";
 export const APPLICATION_API_END_POINT="/api/v1/application";
 export const COMPANY_API_END_POINT="/api/v1/company";
+export const S3_BUCKET_URL="https://jobby-static.s3.us-east-1.amazonaws.com/assets/";
 
 export const Job_Locations={
     "states": [

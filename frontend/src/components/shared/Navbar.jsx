@@ -9,7 +9,7 @@ import axios from 'axios'
 import { USER_API_END_POINT } from '@/utils/constant'
 import { setUser } from '@/redux/authSlice'
 import { toast } from 'sonner'
-import UserImage from '../../assets/Avatar.png'
+import S3_BUCKET_URL from '@/utils/constant'
 
 const Navbar = () => {
     const { user } = useSelector(store => store.auth);
@@ -64,7 +64,7 @@ const Navbar = () => {
                             <Popover>
                                 <PopoverTrigger asChild>
                                     <Avatar className="cursor-pointer">
-                                        <AvatarImage src={UserImage} alt="@shadcn" />
+                                        <AvatarImage src={S3_BUCKET_URL+"Avatar.png"} alt="@shadcn" />
                                     </Avatar>
                                 </PopoverTrigger>
                                 <PopoverContent className="w-80">

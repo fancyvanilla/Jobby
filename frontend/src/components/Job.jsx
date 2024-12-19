@@ -4,7 +4,7 @@ import { Bookmark } from 'lucide-react'
 import { Avatar, AvatarImage } from './ui/avatar'
 import { Badge } from './ui/badge'
 import { useNavigate } from 'react-router-dom'
-import Company from '@/assets/Company.jpg'
+import S3_BUCKET_URL from '@/utils/constant'
 
 const Job = ({job}) => {
     const navigate = useNavigate();
@@ -26,7 +26,7 @@ const Job = ({job}) => {
             <div className='flex items-center gap-2 my-2'>
                 <Button className="p-6" variant="outline" size="icon">
                     <Avatar>
-                        <AvatarImage src={Company} />
+                        <AvatarImage src={S3_BUCKET_URL+"Company.jpg"} />
                     </Avatar>
                 </Button>
                 <div>

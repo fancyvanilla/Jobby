@@ -4,7 +4,8 @@ import { Search } from 'lucide-react'
 import { useDispatch } from 'react-redux';
 import { setSearchedQuery } from '@/redux/jobSlice';
 import { useNavigate } from 'react-router-dom';
-import HomeBG from '@/assets/Home.jpg'
+import S3_BUCKET_URL from '@/utils/constant'
+
 
 const HeroSection = () => {
     const [query, setQuery] = useState("");
@@ -20,7 +21,7 @@ const HeroSection = () => {
         <div 
             className='flex items-center justify-center h-[60vh]'
             style={{ 
-                backgroundImage: `url(${HomeBG})`,
+                backgroundImage: `url(${S3_BUCKET_URL}Home.jpg)`,
                 backgroundSize: 'contain',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat'
