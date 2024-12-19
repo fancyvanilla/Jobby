@@ -4,7 +4,7 @@ import { Bookmark } from 'lucide-react'
 import { Avatar, AvatarImage } from './ui/avatar'
 import { Badge } from './ui/badge'
 import { useNavigate } from 'react-router-dom'
-import S3_BUCKET_URL from '@/utils/constant'
+import {S3_BUCKET_URL} from '@/utils/constant'
 
 const Job = ({job}) => {
     const navigate = useNavigate();

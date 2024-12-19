@@ -4,7 +4,7 @@ import { Search } from 'lucide-react'
 import { useDispatch } from 'react-redux';
 import { setSearchedQuery } from '@/redux/jobSlice';
 import { useNavigate } from 'react-router-dom';
-import S3_BUCKET_URL from '@/utils/constant'
+import {S3_BUCKET_URL} from '@/utils/constant'
 
 
 const HeroSection = () => {
