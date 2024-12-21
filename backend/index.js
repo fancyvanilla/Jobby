@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(cookieParser());
 const corsOptions = {
-    origin:'http://localhost:5173',
+    origin:'https://mariemby.me',
     credentials:true
 }
 
@@ -25,8 +25,16 @@ app.use(cors(corsOptions));
 
 const PORT = process.env.PORT || 3000;
 
+//for aws health checks
+app.use("/health",(_,res)=>{
+    return res.status(200).json({
+        message:"Server is running",
+        success:true
+    })
 
-// api's
+})
+
+//application apis
 app.use("/api/v1/user", userRoute);
 app.use("/api/v1/company", companyRoute);
 app.use("/api/v1/job", jobRoute);
